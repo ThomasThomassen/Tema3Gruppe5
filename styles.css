@@ -40,13 +40,11 @@ header {
 
 #headernav a {
   display: block;
-  margin-left: 1em;
-  font-size: 1.4em;
+  font-size: 18px;
   line-height: 1.4em;
   color: #f4f4f4;
   text-decoration: none;
   font-family: 'Arial', sans-serif;
-  font-size: 18px;
 }
 
 #headernav a:hover {
