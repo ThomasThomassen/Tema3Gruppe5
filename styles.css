@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Kan pt ikke få baggrundsbillede til at virke*/
+body {
+  background-image: url(C:\Thomas\Aalborg Zoo\assets\images\polar1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body p {
+  font-family: 'Arial', sans-serif;
+  line-height: 25px;
+}
+
+body h2 {
+  font-family: 'Arial', cursive;
+}
+
+/* TOP NAV */
+header {
+  background-color: #262626;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+#logo-burgermenu {
+  display: flex;
+  align-items: center;
+}
+
+#headernav {
+  display: flex;
+  list-style: none;
+}
+
+#headernav a {
+  display: block;
+  margin-left: 1em;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  color: #f4f4f4;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+}
+
+#headernav a:hover {
+  color: #f4f4f4;
+  background-color: #171717;
+}
+
+.active {
+  color: #262626;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SECTION */
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: 'Arial', cursive;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #262626;
+}
+
+footer p {
+  color: #f4f4f4;
+  font-size: 12px;
+  line-height: 20px
+}
+
+.kolonne {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  flex-basis: 100%;
+  padding: 10px 0 0;
+}
+
+.kolonne1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.kolonne2 {
+  display: inline;
+  flex-direction: column;
+}
+
+.kolonne2 p {
+  font-family: 'Arial', sans-serif;
+  padding-right: 5px;
+  font-size: 15px;
+}
+
+.kolonne2 img {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 25px;
+}
+
+.kolonne2 img:hover {
+  transition: all .3s ease-out;
+  transform: scale(1.2, 1.2);
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, .5);
+}
+
+/*MEDIA QUERY MOBILE*/
+@media all and (max-width: 599px) {
+
+  /*Navigationsbaren*/
+  header {
+    display: block;
+  }
+
+  #logo-burgermenu {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo-burgermenu label {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+  #toggle:checked+#headernav {
+    display: block;
+  }
+
+  #headernav {
+    display: none;
+  }
+
+  #headernav li {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  #headernav a {
+    margin: 0;
+  }
+
+  #headernav li:last-of-type {
+    border-bottom: none;
+  }
+}
+
+/*MEDIA QUERY TABLET*/
+@media all and (min-width: 600px) {
+
+/* Baggrundsbillede virker stadig ikke */
+  body {
+    background-image: url(C:\Thomas\Aalborg Zoo\assets\images\polar1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /*Navigationsbaren*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #headernav {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+
+  #headernav a {
+    margin: 0;
+    width: 100%;
+    padding: 10px 35px;
+    text-align: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  /*MEDIA QUERY DESKTOP*/
+  @media all and (min-width: 1024px) {
+
+    /*Navigationsbaren*/
+    header {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    #logo img {
+      width: 100px;
+    }
+
+    #headernav a {
+      padding: 30px 50px;
+    }
